@@ -1,14 +1,14 @@
-# secret-shark
+# SECRET-SHARK
 Search for confidential information
 
-## How to run? (Linux only)
+## Run (Linux only)
 
 ```sh
 $ bash init.sh /folder/you/want/to/scan
 ```
 
-### Todos
+### TODOs
 
  - Write MORE Tests
  - Extract Regex into separate file
- 
+

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo -e \
 "
 ##########################################################
@@ -20,4 +21,3 @@ for i in "${my_array[@]}";
 do 
     grep -nrIi -E "$i" --exclude-dir=.git --exclude-dir=node_modules --color=always $1 | cut -c -200
 done
-
