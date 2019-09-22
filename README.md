@@ -11,6 +11,7 @@ $ bash init.sh /folder/you/want/to/scan
 
  - Write MORE Tests
  - Extract Regex into separate file
- - Build Logic in Python and leave GREP as SysCall
- 
+ - Build Logic in Python and leave GREP as SysCall (try mmap)
+ - In case of Git folder scan only the latest 3 chains of Git
+
 
