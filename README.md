@@ -11,4 +11,6 @@ $ bash init.sh /folder/you/want/to/scan
 
  - Write MORE Tests
  - Extract Regex into separate file
+ - Build Logic in Python and leave GREP as SysCall
+ 
 
