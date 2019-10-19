@@ -57,7 +57,6 @@ def exec_grep():
         if(len(output["findings"])>0):
             Output_Array["grep"].append(output)
     
-    #print(json.dumps(Regexs_Output_Array, indent=4, sort_keys=True))
 
 def exec_find():
     Regexs_Output_Array = []
