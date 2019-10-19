@@ -1,5 +1,5 @@
 # SECRET-SHARK
-Search for confidential information
+Search for confidential information via GREP and FIND command, by exposing the output in JSON
 
 ## Run (Linux only)
 
