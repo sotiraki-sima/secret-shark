@@ -4,7 +4,7 @@ Search for confidential information
 ## Run (Linux only)
 
 ```sh
-$ bash scan.sh /folder/you/want/to/scan
+$ python3 /folder/you/want/to/scan
 ```
 
 ### TODOs

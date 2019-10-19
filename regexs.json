@@ -1,10 +1,18 @@
 {
-    "active":{
+    "active_regexs":{
         "AWS_KEY": "(= |=)[A-Z0-9]{20}$",
-        "AWS_KEY_SECRET": "(= |=)[A-Z0-9]{20}$",
+        "AWS_KEY_SECRET": "(= |=)[A-Z0-9]{40}$",
         "AWS_Secret_Key_Direct": "(access_key_id|secret_access_key)"
     },
-    "non_active":{
+    "non_active_regexs":{
+         
+    },
+    "active_files":{
+        "PEM": "*.pem",
+        "RSA": "id_rsa",
+        "authorized_keys": "authorized_keys"
+    },
+    "non_active_files":{
          
     }
 }
