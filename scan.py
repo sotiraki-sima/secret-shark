@@ -20,7 +20,7 @@ def getFinding_GREP(proc):
     for line in proc.stdout:
         finding = {}
         out_line = str(line.rstrip().decode("utf-8") ).split(":")
-        print(out_line)
+        #print(out_line)
         finding["file"] = out_line[0]
         finding["line"] = out_line[1]
         finding["match"] = str(out_line[2])
@@ -64,7 +64,7 @@ def exec_find():
         output = {}
         output["file_key"] = file_key
         output["file_value"] = file_value
-        print("Find for: " + file_value)
+        #print("Find for: " + file_value)
         proc = subprocess.Popen(['bash', EXEC_FIND_SCRIPT, scanning_path, file_value],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         output["findings"] = getFinding_FIND(proc)

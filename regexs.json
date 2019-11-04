@@ -2,7 +2,12 @@
     "active_regexs":{
         "AWS_KEY": "(= |=)[A-Z0-9]{20}$",
         "AWS_KEY_SECRET": "(= |=)[A-Z0-9]{40}$",
-        "AWS_Secret_Key_Direct": "(access_key_id|secret_access_key)"
+        "AWS_Secret_Key_Direct": "(access_key_id|secret_access_key)",
+        "RSA_PRIVATE_KEY": "(---BEGIN RSA PRIVATE KEY---)",
+        "DSA_PRIVATE_KEY": "(---BEGIN DSA PRIVATE KEY---)",
+        "PASSWORD_IN_CODE": "(password|PASSWORD|pass|PASS|secret|SECRET|key|KEY)[ ]{0,1}[=:]{1}[ ]{0,1}[\"']{1}[a-zA-Z0-9!\\.!-_]{4,300}[\"']{1}",
+        "PASSWORD_IN_XML": "(password|PASSWORD|pass|PASS|secret|SECRET|key|KEY)(>){1}[a-zA-Z0-9!\\.!-_]{4,300}(<){1}",
+        "JWT": "[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*"
     },
     "non_active_regexs":{
          

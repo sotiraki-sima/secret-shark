@@ -4,7 +4,7 @@ Search for confidential information via GREP and FIND command, by exposing the o
 ## Run (Linux only)
 
 ```sh
-$ python3 /folder/you/want/to/scan
+$ python3 scan.py /folder/you/want/to/scan
 ```
 
 ### TODOs
