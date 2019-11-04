@@ -8,7 +8,7 @@
         "PRIVATE_KEY": "---BEGIN PRIVATE KEY---",
         "PASSWORD_IN_CODE": "(password|PASSWORD|pass|PASS|secret|SECRET)[ ]{0,1}[=:]{1}[ ]{0,1}[\"']{1}[a-zA-Z0-9*=\\\\\\/\\.\\-_@!#\\+]{4,300}[\"']{1}",
         "PASSWORD_IN_XML": "(password|PASSWORD|pass|PASS|secret|SECRET)(>){1}[a-zA-Z0-9*=\\\\\\/\\.\\-_@!#\\+]{4,300}(<){1}",
-        "JWT": "[a-zA-Z0-9]{1,5000}(.)[a-zA-Z0-9]{1,5000}(.)"
+        "JWT": "(eyJ0eXAiOiJKV1QiLCJh)[a-zA-Z0-9\\-\\_\\=]+(.)[a-zA-Z0-9\\-\\_\\=]+(.)[a-zA-Z0-9\\-\\_\\=]+"
     },
     "non_active_regexs":{
         "JWT": "[a-zA-Z0-9-_=]+(.)[a-zA-Z0-9-_=]+(.)[a-zA-Z0-9-_=+]+"
