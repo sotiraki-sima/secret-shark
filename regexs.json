@@ -5,12 +5,14 @@
         "AWS_Secret_Key_Direct": "(access_key_id|secret_access_key)",
         "RSA_PRIVATE_KEY": "(---BEGIN RSA PRIVATE KEY---)",
         "DSA_PRIVATE_KEY": "(---BEGIN DSA PRIVATE KEY---)",
-        "PASSWORD_IN_CODE": "(password|PASSWORD|pass|PASS|secret|SECRET|key|KEY)[ ]{0,1}[=:]{1}[ ]{0,1}[\"']{1}[a-zA-Z0-9!\\.!-_]{4,300}[\"']{1}",
-        "PASSWORD_IN_XML": "(password|PASSWORD|pass|PASS|secret|SECRET|key|KEY)(>){1}[a-zA-Z0-9!\\.!-_]{4,300}(<){1}",
-        "JWT": "[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*"
+        "PRIVATE_KEY": "---BEGIN PRIVATE KEY---",
+        "PASSWORD_IN_CODE": "(password|PASSWORD|pass|PASS|secret|SECRET)[ ]{0,1}[=:]{1}[ ]{0,1}[\"']{1}[a-zA-Z0-9*=\\\\\\/\\.\\-_@!#\\+]{4,300}[\"']{1}",
+        "PASSWORD_IN_XML": "(password|PASSWORD|pass|PASS|secret|SECRET)(>){1}[a-zA-Z0-9*=\\\\\\/\\.\\-_@!#\\+]{4,300}(<){1}",
+        "JWT": "[a-zA-Z0-9]{1,5000}(.)[a-zA-Z0-9]{1,5000}(.)"
     },
     "non_active_regexs":{
-         
+        "JWT": "[a-zA-Z0-9-_=]+(.)[a-zA-Z0-9-_=]+(.)[a-zA-Z0-9-_=+]+"
+
     },
     "active_files":{
         "PEM": "*.pem",
