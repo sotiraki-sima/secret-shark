@@ -21,10 +21,15 @@ def getFinding_GREP(proc):
         finding = {}
         out_line = str(line.rstrip().decode("utf-8") ).split(":")
         #print(out_line)
-        finding["file"] = out_line[0]
-        finding["line"] = out_line[1]
-        finding["match"] = str(out_line[2])
+        try:
+            finding["file"] = out_line[0]
+            finding["line"] = out_line[1]
+            finding["match"] = str(out_line[2])
+        except:
+            pass
+
         findings.append(finding)
+        Output_Array["summary"]["grep"] += 1
 
     return findings
 
@@ -35,12 +40,18 @@ def getFinding_FIND(proc):
         finding = {}
         out_line = str(line.rstrip().decode("utf-8") )
         findings.append(out_line)
+        Output_Array["summary"]["find"] += 1
+
 
     return findings
 
 Output_Array = {}
 Output_Array["grep"] = []
 Output_Array["find"] = []
+Output_Array["summary"] = {
+    "grep": 0,
+    "find": 0
+}
 
 
 def exec_grep():
@@ -56,6 +67,7 @@ def exec_grep():
 
         if(len(output["findings"])>0):
             Output_Array["grep"].append(output)
+            
     
 
 def exec_find():
@@ -71,6 +83,7 @@ def exec_find():
         
         if(len(output["findings"])>0):
             Output_Array["find"].append(output)
+            
     
 
 def main():
